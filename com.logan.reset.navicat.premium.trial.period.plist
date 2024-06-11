@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <!-- 此处定义的是定时任务的名称，之后可用于搜索或停止该任务，建议与文件名一致即可 -->
+        <string>com.logan.reset.navicat.premium.trial.period</string>
+
+        <!-- 要运行的脚本的绝对路径 -->
+        <key>Program</key>
+        <string>/Users/logan/Data/Config/navicat-reset-trial/reset.sh</string>
+
+        <!-- 在加载该文件时即启动任务(当你的 Mac 从睡眠或关机状态唤醒时)，如果不需要可以删掉或改为false -->
+        <key>RunAtLoad</key>
+        <true/>
+
+        <!-- 在指定时间执行任务 -->
+        <key>StartCalendarInterval</key>
+        <!-- 下面表示每隔7天,在15点30分执行任务 -->
+        <dict>
+            <!-- 设置每周一执行一次; 1:星期一 0:星期天-->
+            <key>Weekday</key>
+            <integer>1</integer>
+            <key>Hour</key>
+            <integer>15</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+
+        <!-- 间隔多少秒执行任务，下面注释内容表示间隔604800秒(7天)执行一次任务，两种方式只能选一种 -->
+        <!-- 如果您通过设置 StartCalendarInterval 键来调度 launchd 作业，并且在任务应该运行时计算机处于睡眠状态，则您的任务将在计算机唤醒时运行。
+             但是，如果机器在作业应该运行时处于关机状态，则作业直到下一个指定时间发生才执行。
+             当计算机关闭或处于睡眠状态时，所有其他 launchd 作业(StartInterval)都将被跳过;直到下一个指定时间发生时，它们才会运行。
+        -->
+        <!-- <key>StartInterval</key> -->
+        <!-- <integer>604800</integer> -->
+
+        <!-- 运行日志，请以实际为准 -->
+        <key>StandardOutPath</key>
+        <string>/Users/logan/Logs/navicat-reset/reset.log</string>
+        <!-- 错误日志，请以实际为准 -->
+        <key>StandardErrorPath</key>
+        <string>/Users/logan/Logs/navicat-reset/reset.log</string>
+    </dict>
+</plist>
