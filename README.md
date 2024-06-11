@@ -5,9 +5,9 @@
 
 ## 需要修改的内容
 
-> 1 reset.sh 里都是软件安装的默认目录,无特殊情况不用动  
-> 2 com.logan.reset.navicat.premium.trial.period.plist 里的 Program 要修改成reset.sh的绝对路径  
-> 3 按需修改或删除日志记录的绝对路径: StandardOutPath StandardErrorPath  
+> 1 `reset.sh` 里都是软件安装的默认目录,无特殊情况不用动  
+> 2 `plist` 里的 Program 要修改成reset.sh的绝对路径  
+> 3 按需修改或删除 `plist` 中日志记录的绝对路径: StandardOutPath StandardErrorPath  
 
 ## 步骤
 
