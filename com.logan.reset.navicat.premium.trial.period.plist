@@ -10,19 +10,23 @@
         <key>Program</key>
         <string>/Users/logan/Data/Config/navicat-reset-trial/reset.sh</string>
 
-        <!-- 在加载该文件时即启动任务(当你的 Mac 从睡眠或关机状态唤醒时)，如果不需要可以删掉或改为false -->
+        <!-- 在加载该文件时即启动任务(当你的 Mac 从关机状态被唤醒,并且当前用户登录时)，如果不需要可以删掉或改为false -->
         <key>RunAtLoad</key>
         <true/>
 
+        <!-- 值为true将在任务加载后立即运行,并在任务停止时重新启动作业 -->
+        <key>KeepAlive</key>
+        <false/>
+
         <!-- 在指定时间执行任务 -->
         <key>StartCalendarInterval</key>
-        <!-- 下面表示每隔7天,在15点30分执行任务 -->
+        <!-- 下面表示每周一,在凌晨0点30分执行任务,若处于关机或睡眠,则唤醒时执行 -->
         <dict>
-            <!-- 设置每周一执行一次; 1:星期一 0:星期天-->
+            <!-- 1:星期一 0:星期天-->
             <key>Weekday</key>
             <integer>1</integer>
             <key>Hour</key>
-            <integer>15</integer>
+            <integer>0</integer>
             <key>Minute</key>
             <integer>30</integer>
         </dict>
